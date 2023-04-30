@@ -249,24 +249,24 @@ transferred ball is black. }
 \bigskip
 \newline\noindent\textbf{Answer: }$(\frac{16}{31})$\\
 \noindent\textbf{Solution: }\textit{By Bayes's Theorem we have,for any i =1,2,3,..n , where $E_1, E_2,…, E_n $ be a set of events associated with a sample space S, where all the events $E_1, E_2,…, E_n $ form a partition of S.For an event A associated with S,}
-\[P(E_i|A)=\frac{P(E_i)P(A|E_i)}{\sum_{k=1}^{k=n}P(E_k)P(A|E_k)}\]
-\\Let R and B be the events that the ball transferred from Box-1 to Box-2 is Red and Black respectively.
-\[
-\\P(R)=\frac{No.of  Red  balls}{Total  Balls}= \frac{3}{7}
-\]
-\[
-P(B)=\frac{No.of Black  balls}{Total  Balls}=\frac{4}{7}
-\]
+\[\pr{E_i|A}=\frac{\pr{E_i}\pr{A|E_i}}{\sum_{k=1}^{k=n}\pr{E_k}\pr{A|E_k}}\]
+\\Let R and B be the events that the ball transferred from Box-1 to Box-2 is Red and Black respectively.\\
+\begin{align}
+\pr{R}&=\frac{No.of  Red  balls}{Total  Balls}= \frac{3}{7}\\
+\pr{B}&=\frac{No.of Black  balls}{Total  Balls}=\frac{4}{7}
+\end{align}
 \\Let's take the conditional probability for event E, which denotes the outcome of final ball drawn being Red.
-\\When event R occurs, in Box-2 the count of red balls becomes 5 and black balls remains 5. 
-\[P(E|R)=\frac{5}{10}\]
-\\When event B occurs, in Box-2 the count of red balls remains 4 and black balls becomes 5. 
-\[P(E|B)=\frac{4}{10}\]
-\\\textit{By Bayes Theorem,}
-\[P(E|B)=\frac{P(E|B).P(B)}{P(E|B).P(B)+P(E|R).P(R)}\]
-where P(E/B) is the probability of final ball being red known that the transferred ball is Black, which is our desired final answer.
-\[P(E|B)=\frac{\frac{4}{10}.\frac{4}{7}}{\frac{4}{10}.\frac{4}{7}+\frac{5}{10}.\frac{3}{7}}\]
-\[P(E|B)=\frac{16}{31}\]
+\\When event R occurs, in Box-2 the count of red balls becomes 5 and black balls remains 5. \\
+\begin{align}\pr{E|R}=\frac{5}{10}\end{align}
+\\When event B occurs, in Box-2 the count of red balls remains 4 and black balls becomes 5. \\
+\begin{align}\pr{E|B}=\frac{4}{10}\end{align}
+\\\textit{By Bayes Theorem,}\\
+\begin{align}\pr{E|B}=\frac{\pr{E|B}.\pr{B}}{\pr{E|B}.\pr{B}+\pr{E|R}.\pr{R}}\end{align}
+where P(E/B) is the probability of final ball being red known that the transferred ball is Black, which is our desired final answer.\\
+\begin{align}
+\pr{E|B}&=\frac{\frac{4}{10}.\frac{4}{7}}{\frac{4}{10}.\frac{4}{7}+\frac{5}{10}.\frac{3}{7}}\\
+\pr{E|B}&=\frac{16}{31}
+\end{align}
 \\The probability that the transferred ball is Black is $\frac{16}{31}$.
 \bigskip
 
