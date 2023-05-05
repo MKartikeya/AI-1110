@@ -1,6 +1,6 @@
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
 %\documentclass[conference]{IEEEtran}
 %\IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
@@ -248,39 +248,44 @@ The ball so drawn is found to be red in colour. Find the probability that the
 transferred ball is black. }
 \bigskip
 \newline\noindent\textbf{Answer: }$(\frac{16}{31})$\\
-\noindent\textbf{Solution: }
-\\Let R and B be the events that the ball transferred from Box-1 to Box-2 is Red and Black respectively.\\
+\noindent\textbf{Solution: }\\
+Let \pr{X,Y} be the Random variable for the events of drawing balls from bags.
 \begin{align}
-  \pr{R}&=\frac{No.of  Red  balls}{Total  Balls}= \frac{3}{7}\\
-  \pr{B}&=\frac{No.of Black  balls}{Total  Balls}=\frac{4}{7}
-\end{align}\\
-Let \pr{X} be the Random variable for the outcomes of ball drawn from Bag II.
-\begin{align}
-	X = 
+  X&=
+  \begin{cases}
+    1, & \text{if ball is being drawn from Bag I} \\
+    2, & \text{if ball is being drawn from Bag I}\\
+  \end{cases}\\
+	Y&= 
 	\begin{cases}
-		1, & \text{if ball drawn is red known that event R occurs} \\
-		2, & \text{if ball drawn is red known that event B occur}\\
-    3, & \text{if ball drawn is Black}
+		1, & \text{if ball drawn is Red} \\
+    2, & \text{if ball drawn is Black}
 	\end{cases}
 \end{align}
-\begin{align}\pr{X=1}&=\pr{R}\times\frac{5}{10}=\frac{15}{70}\\
-\pr{X=2}&=\pr{B}\times\frac{4}{10}=\frac{16}{70}\end{align}\\
-Let \pr{X=3} denote the probabilty that ball drawn is Black. We know that the ball drawn will be Black or Red for sure. So,\\
-\begin{align}\pr{X=3}&=1-\pr{X=1}-\pr{X=2}\\
-  \pr{X=3}&=1-\frac{15}{70}-\frac{16}{30}\\
-  \pr{X=3}&=\frac{39}{70}
+\begin{align}
+  \pr{X=1,Y=1}&=\frac{No.of  Red  balls}{Total  Balls}= \frac{3}{7}\\
+  \pr{X=1,Y=2}&=\frac{No.of Black  balls}{Total  Balls}=\frac{4}{7}
+\end{align}\\
+\begin{align}
+  \pr{X=2,Y=1}&=\pr{X=1,Y=1}\times\frac{5}{10}+\pr{X=1,Y=2}\times\frac{4}{10}
 \end{align}
+\begin{align}
+  \pr{X=2,Y=1}&=\frac{15}{70}+\frac{16}{70}\\
+  \pr{X=2,Y=1}&=\frac{31}{70}
+\end{align}
+By total probability law, we know,
+\begin{align}\pr{X=2,Y=2}&=1-\pr{X=2,Y=1}\\
+  \pr{X=2,Y=2}&=\frac{39}{70}
+\end{align}\\
 \\\textit{By Bayes Theorem,}\\
-\begin{align}\pr{E_i|A}&=\frac{\pr{E_i}\pr{A|E_i}}{\sum_{k=1}^{k=n}\pr{E_k}\pr{A|E_k}}\\
-\pr{B|E}&=\frac{\pr{E|B}\pr{B}}{\pr{E|B}\pr{B}+\pr{E|R}\pr{R}}\\
-\pr{B|E}&=\frac{\pr{X=1}}{\pr{X=1}+\pr{X=2}}\end{align}
+\begin{align}\pr{E_i|A}=\frac{\pr{E_i}\pr{A|E_i}}{\sum_{k=1}^{k=n}\pr{E_k}\pr{A|E_k}}\end{align}\\
+\begin{align}\pr{B|E}=\frac{\pr{(X=2,Y=1)|(X=1,Y=1)}\pr{X=1,Y=1}}{\pr{X=2,Y=1|X=1,Y=1}\pr{X=1,Y=1}+\pr{X=2,Y=1|X=1,Y=2}\pr{X=1,Y=2}}\end{align}\\
 where \pr{B|E} is the conditional probability of transferred ball being Black, known that the final ball drawn is Red which is our desired final answer.\\
 \begin{align}
-\pr{B|E}&=\frac{\frac{4}{10}\times\frac{4}{7}}{\frac{4}{10}\times\frac{4}{7}+\frac{5}{10}\times\frac{3}{7}}\\
-\pr{B|E}&=\frac{16}{31}
+\pr{X=1|Y=2}&=\frac{\frac{4}{10}\times\frac{4}{7}}{\frac{4}{10}\times\frac{4}{7}+\frac{5}{10}\times\frac{3}{7}}\\
+\pr{X=1|Y=2}&=\frac{16}{31}
 \end{align}
 \bigskip
-
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 \end{document}
