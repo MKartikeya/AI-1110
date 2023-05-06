@@ -284,11 +284,11 @@ By total probability law, we know,
   \end{table}
 \\\textit{By Bayes Theorem,}\\
 \begin{align}\pr{E_i|A}=\frac{\pr{E_i}\pr{A|E_i}}{\sum_{k=1}^{k=n}\pr{E_k}\pr{A|E_k}}\end{align}\\
-\begin{align}\pr{B|E}=\frac{\pr{(X=2,Y=1)|(X=1,Y=1)}\pr{X=1,Y=1}}{\pr{X=2,Y=1|X=1,Y=1}\pr{X=1,Y=1}+\pr{X=2,Y=1|X=1,Y=2}\pr{X=1,Y=2}}\end{align}\\
-where \pr{B|E} is the conditional probability of transferred ball being Black, known that the final ball drawn is Red which is our desired final answer.\\
+\begin{align}\pr{X=1,Y=2|X=2,Y=2}=\frac{\pr{X=2,Y=1|X=1,Y=1}}{\sum_{i=1}^{i=2}\pr{X=2,Y=1|X=1,Y=i}\pr{X=1,Y=i}}\end{align}\\
+where \pr{X=1,Y=2|X=2,Y=1} is the conditional probability of transferred ball being Black, known that the final ball drawn is Red which is our desired final answer.\\
 \begin{align}
-\pr{B|E}&=\frac{\frac{4}{10}\times\frac{4}{7}}{\frac{4}{10}\times\frac{4}{7}+\frac{5}{10}\times\frac{3}{7}}\\
-\pr{B|E}&=\frac{16}{31}
+\pr{X=1,Y=2|X=2,Y=1}&=\frac{\frac{4}{10}\times\frac{4}{7}}{\frac{4}{10}\times\frac{4}{7}+\frac{5}{10}\times\frac{3}{7}}\\
+\pr{X=1,Y=2|X=2,Y=1}&=\frac{16}{31}
 \end{align}
 \bigskip
 \renewcommand{\thefigure}{\theenumi}
