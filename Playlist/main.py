@@ -5,6 +5,7 @@ import tkinter as tk
 from tkinter import font
 
 myList=os.listdir("/home/kartikeya/Desktop/Prob/PLAYLIST-project/audios")
+myList2=os.listdir("/home/kartikeya/Desktop/Prob/PLAYLIST-project/audios")
 mixer.init()
 # next=0
 
@@ -21,6 +22,12 @@ def stop_click():
     mixer.music.stop()
     current_playing=random.choice(myList)
     mixer.music.load("/home/kartikeya/Desktop/Prob/PLAYLIST-project/audios/"+current_playing) 
+    if(len(myList)>1):
+        myList.remove(current_playing)
+    else:
+        print("PLaylist completed once.")
+        myList.remove(current_playing)
+        myList.extend(myList2)
     mixer.music.set_volume(10)
     mixer.music.play()
     text_label.config(text=current_playing+"is the current song.")
